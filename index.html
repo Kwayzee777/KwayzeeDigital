@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominick's Portfolio</title>
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+
+    <!--Navigation Menu-->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                <span>Dominick</span>
+            </div>
+            <div class = "links">
+                <div class = "link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"> <a href="#">Home</a></div>
+                <div class = "link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"> <a href="#about">About</a></div>
+                <div class = "link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"> <a href="#skills">Skills</a></div>
+                <div class = "link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"> <a href="#services">Services</a></div>
+                <div class = "link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"> <a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class = "dropdown">
+            <div class = Links></div>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Skills</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <i class = "fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+    </nav>
+    <section>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <div class="main-container">
+            <div class = "image" data-aos="zoom-out" data-aos-duration="1500">
+                <img src="Images/Profilepic1.jpg">
+            </div>
+            <div class = "content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="900">Hey I'm <span>Dominick</span>
+                </h1>
+                <div class="type-writer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm A <span id = "typewriter"></span>
+                    <label for = "">|</label>
+
+                    <!--Typing JS-->
+                    <script>
+                        function sleep(ms) {
+                          return new Promise((resolve) => setTimeout(resolve, ms));
+                        }
+                  
+                        const phrases = ["Developer", "Designer", "YouTuber"];
+                        const el = document.getElementById("typewriter");
+                  
+                        let sleepTime = 100;
+                  
+                        let curPhraseIndex = 0;
+                  
+                        const writeLoop = async () => {
+                          while (true) {
+                            let curWord = phrases[curPhraseIndex];
+                  
+                            for (let i = 0; i < curWord.length; i++) {
+                              el.innerText = curWord.substring(0, i + 1);
+                              await sleep(sleepTime);
+                            }
+                  
+                            await sleep(sleepTime * 10);
+                  
+                            for (let i = curWord.length; i > 0; i--) {
+                              el.innerText = curWord.substring(0, i - 1);
+                              await sleep(sleepTime);
+                            }
+                  
+                            await sleep(sleepTime * 5);
+                  
+                            if (curPhraseIndex === phrases.length - 1) {
+                              curPhraseIndex = 0;
+                            } else {
+                              curPhraseIndex++;
+                            }
+                          }
+                        };
+                  
+                        writeLoop();
+                      </script>
+                    
+                    <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I'm currently working towards my computer science degree and trying to land some freelance jobs on the side! Computers are a big passion for me and I am hoping to find a job in the field very soon. I will be updating the site as i progres and hope to hear from you in the future with some jobs</p>
+                </div>
+                <div class = "social-links">
+                    <a href = "https://github.com/Kwayzee777" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><i class = "fa-brands fa-github"></i></a>
+                    <a href = "https://www.linkedin.com/in/dominick-finch-3b1546162/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><i class = "fa-brands fa-linkedin"></i></a>
+                    <a href = "https://www.youtube.com/@Kwayzeeee" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><i class = "fa-brands fa-youtube"></i></a>
+                    <a href = "https://discord.gg/MVbDYRkeFg" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800"><i class = "fa-brands fa-discord"></i></a>
+                    <a href = "https://www.instagram.com/_kwayzee/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000"><i class = "fa-brands fa-instagram"></i></a>
+                    <a href = "https://steamcommunity.com/id/Kwayzee_/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200"><i class = "fa-brands fa-steam"></i></a>
+                </div>
+                <div class = "btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1500">
+                    <button><a href="mailto:DominickAFinch@gmail.com">Hire me</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--About Me Section Start-->
+
+    <section class="about" id="about">
+        <div class = "content">
+            <div class="title" data-aos="fade-up" data-aos-duration="1500"><span>About Me</span></div>
+                <div class = "about-details">
+                    <div class = "left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
+                        <img src = "Images/Profilepic2.jpg" alt = "profile pic">
+                    </div>
+                    <div class = "right">
+                        <div class = "topic" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">I love to explore new things!</div>
+                            <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="400">I'm a hug fan of animals and I see them as part of my family. I recently started my journey of computer science and have been loving it and wanted to make this website as my portfolio and to be able to track my progress over the coming Months and years. It's been a relief to find something im passionate about that i can alsoturn into a full time job!</p>
+                        <div class = "Button" data-aos="zoom-in-right" data-aos-duration="1500" data-aos-delay="400">
+                            <button>Download CV</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+
+    <!--My Skills Section-->
+
+    <section class = "skills" id = "skills">
+        <div class = "content">
+            <div class = "title" data-aos="fade-up" data-aos-duration="1200"><span>My Skills</span></div>
+            <div class = "skills-details">
+                <div class = "text">
+                    <div class = "topic" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">Skills Reflects Our Knowledge</div>
+                    <p data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">I believe that the skills people have reflect the knowledge that a person has. I wish to work with small companies to increase the vastness of my own knowledge.</p>
+                    <div class = "experience" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                        <div class = "num">2</div>
+                        <div class = "exp">
+                            Years Of <br/>
+                            Experience
+                        </div>
+                    </div>
+            </div>
+            <div class = "boxes">
+                <div class = "box">
+                    <div class = "topic" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="150">HTML</div>
+                    <div class = "per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">80%</div>
+                </div>
+                <div class = "box">
+                    <div class = "topic" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="150">CSS</div>
+                    <div class = "per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">90%</div>
+                </div>
+                <div class = "box">
+                    <div class = "topic" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="150">JavScript</div>
+                    <div class = "per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">30%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--My Services Section-->
+
+    <section class = "services" id = "services">
+        <div class ="content">
+            <div class = "title" data-aos="fade-up" data-aos-duration="1200"><span>My Services</span></div>
+            <div class = "boxes">
+                <div class = "box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                    <div class="icon">
+                        <i class = "fas fa-desktop"></i>
+                    </div>
+                    <div class = "topic">Web Devolpment</div>
+                    <p>I can create you websites using any combonation of HTML, CSS and JavaScript. If it's something I havent done before I will be even more willing to take it on as I challenge myself to become a more compotent website Developer!</p>
+                </div>
+            <div class = "box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                <div class="icon">
+                    <i class = "fas fa-paint-brush"></i>
+                </div>
+                <div class = "topic">Graphic Design</div>
+                <p>When it comes to Graphic Design I've only ever really done Small projects like making thumbnails for YouTube Videos and Profile pictures for social media but would love to help you out!</p>
+            </div>
+            <div class = "box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                <div class="icon">
+                    <i class = "fas fa-chart-line"></i>
+                </div>
+                <div class = "topic">Digital Marketing</div>
+                <p>When it comes to digital marketing I know how important it is to make that attention grabber to leave a lasting impact on the viewer and hope this website was able to do that for you!</p>
+            </div>
+            <div class = "box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
+                <div class="icon">
+                    <i class = "fa-brands fa-youtube"></i>
+                </div>
+                <div class = "topic">Content Creation</div>
+                <p>Now for content creation I specialize in the gaming aspect of this but when I'm not gaming for content creation I'm Making AMV's and jamming out to some nice hype music!</p>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!--My Contact Me Section-->
+    <section class = "contact" id = "contact">
+        <div class = "content">
+            <div class = "title" data-aos="fade-up" data-aos-duration="1500">
+                <span>Contact Me</span>
+            </div>
+            <div class = "text" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+                <div class = "topic">Have Any Project?</div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat animi, recusandae distinctio nostrum perferendis voluptas quae dolores saepe suscipit consectetur tenetur commodi nesciunt magnam perspiciatis, quidem impedit. Consectetur, sit tenetur.</p>
+                <div class = "button" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
+                    <button><a href="mailto:DominickAFinch@gmail.com">Let's Chat</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer Section Start-->
+
+    <footer>
+        <div class = "text">
+            <span>Created by <a href="#">Kwayzee</a> | &#169; 2025 All Rights Reserved</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+</body>
+</html>
