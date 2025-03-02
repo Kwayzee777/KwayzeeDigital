@@ -119,9 +119,17 @@ nav {
     background-color: #b74b4b;
 }
 
+html {
+    scroll-snap-type:y mandatory;
+    scroll-padding-top: 120px;
+}
+
 section{
     width: 100%;
     min-height: 90vh;
+/*    scroll-snap-align: start;
+    scroll-snap-stop: always;
+*/
 }
 
 section .main-container{
