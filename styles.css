@@ -12,8 +12,12 @@
 body {
     width: 100%;
     height: auto;
-    background-color: black;
     overflow-x: hidden;
+    padding-top: 120px;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     padding-top: 120px;
 }
 
@@ -161,8 +165,12 @@ section .main-container{
 .content .type-writer {
     font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 600;
+    
 }
 
+.content .type-writer span {
+text-shadow: 0 0 10px #b74b4b;
+}
 .content .typewriter-text{
     color: #b74b4b;
     text-shadow: 0 0 10px #b74b4b;
@@ -366,9 +374,6 @@ section label{
 
 /* My Skills Section */
 
-.skills {
-    background: black;
-}
 
 .skills .content{
     padding: 40px 0;
@@ -597,8 +602,8 @@ footer .text span a:hover{
     }
     .main-container .image{
         z-index: -1;
-        width: 50%;
-        height: 60%;
+        width: 500px;
+        height: 500px;
     }
 
     .skills .skills-details{
@@ -630,8 +635,8 @@ footer .text span a:hover{
 
 @media (max-width: 500px) {
     .main-container .image{
-        width: 50%;
-        height: 60%;
+        width: 500px;
+        height: 500px;
         margin-bottom: 0px;
     }
 
